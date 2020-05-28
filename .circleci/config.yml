@@ -11,6 +11,9 @@ jobs:
             python --version
             pip --version
           name: Test
+      - run:
+          command: date
+          name: Date
 
 workflows:
   main:

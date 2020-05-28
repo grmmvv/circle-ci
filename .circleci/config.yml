@@ -7,13 +7,13 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install CM
           command: |
-            python --version
-            pip --version
-          name: Test
+            curl -s https://aerokube.com/cm/bash | bash
+            ./cm selenoid start --vnc
       - run:
-          command: date
           name: Date
+          command: date
 
 workflows:
   main:

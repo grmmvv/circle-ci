@@ -5,7 +5,7 @@ orbs:
 
 jobs:
   build-and-test:
-    executor: python/@3.7
+    executor: circleci/python@3.1.4
     steps:
       - checkout
       - run:
